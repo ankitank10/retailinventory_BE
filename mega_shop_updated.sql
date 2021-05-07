@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mega_shop`
+-- Database: `retail_inventory_system`
 --
 
 -- --------------------------------------------------------
@@ -64,11 +64,42 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `title`) VALUES
-(1, 'Shoes'),
-(2, 'Electronics');
+(1, 'Clothing'),
+(2, 'Footwear'),
+(3, 'Accessories');
 
 -- --------------------------------------------------------
+--
+-- Table structure for table `subcategories`
+--
 
+CREATE TABLE `subcategories` (
+                              `id` int(11) NOT NULL,
+                              `title` varchar(255) NOT NULL,
+                              `cat_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `categories`
+--
+
+insert into subcategories (id, title, cat_id) VALUES
+(1, 'Men', 1),
+(2, 'Women' , 1),
+(3, 'Shorts', 1),
+(4, 'Shirts', 1),
+(5, 'Bottom Wear', 1),
+(6, 'Men', 2),
+(7, 'Women', 2),
+(8, 'Shoes', 2),
+(9, 'Sleepers', 2),
+(10, 'Men', 3),
+(11, 'Women', 3),
+(12, 'Kids', 3),
+(13, 'Backpacks', 3),
+(14, 'Sumglasses', 3);
+
+-- --------------------------------------------------------
 --
 -- Table structure for table `orders`
 --

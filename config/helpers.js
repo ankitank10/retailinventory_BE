@@ -5,9 +5,9 @@ const bcrypt = require('bcrypt');
 let conn = new Mysqli({
     Host: 'localhost', // IP/domain name 
     post: 3306, // port, default 3306 
-    user: 'mega_user', // username 
-    passwd: '123456', // password 
-    db: 'mega_shop'
+    user: 'root', // username
+    passwd: 'ank6117599', // password
+    db: 'retail_inventory_system'
 });
 
 let db = conn.emit(false, '');
@@ -73,9 +73,5 @@ module.exports = {
         } else {
             res.status(401).send("Username or password incorrect");
         }
-        
-        
-        
-
     }
 };

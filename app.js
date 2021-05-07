@@ -10,10 +10,10 @@ const swaggerUI = require('swagger-ui-express');
 const swaggerOptions = {
     swaggerDefinition: {
         info: {
-            title: "Shop API",
+            title: "Retail Inventory API",
             description: "Backend Api",
             contact: {
-                name: 'Amazing Developer'
+                name: 'Y Company'
             },
             servers: "http://localhost:3636"
         }
@@ -45,13 +45,6 @@ const authRouter = require('./routes/auth');
 const orderRouter = require('./routes/order');
 
 // Define Routes
-/**
- * @swagger
- * /api/products:
- *   get:
- *    description: Get All Products
- *
- */
 
 app.use('/api/users', usersRouter);
 app.use('/api/products', productsRouter);
