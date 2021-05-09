@@ -3,5 +3,6 @@ const config = require('../../config/database').elasticSearch;
 
 module.exports = new Decorator({
     host: config.address,
-    log: config.log
-}, 'test_es_db');
+    log: config.log,
+    node: 'http://localhost:9200'
+}, 'inventory_BE');

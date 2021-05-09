@@ -1,4 +1,17 @@
 const Sequelize = require('sequelize');
-const config = require('../config/database').database;
+const dbConfig = require('../config/database');
 
-module.exports = new Sequelize(`${config.connectionString}/${config.dbName}`, config.options);
+// module.exports = config;
+
+module.exports = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
+    host: dbConfig.HOST,
+    dialect: dbConfig.dialect,
+    operatorsAliases: false,
+
+    pool: {
+        max: dbConfig.pool.max,
+        min: dbConfig.pool.min,
+        acquire: dbConfig.pool.acquire,
+        idle: dbConfig.pool.idle
+    }
+});

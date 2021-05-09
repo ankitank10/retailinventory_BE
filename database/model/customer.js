@@ -35,5 +35,10 @@ model.getSearchOptions = () => {
         keys: ['account_name', 'city', 'country' ]
     }
 }
-
 module.exports = esDecorator.decorate(model);
+
+model.sync().then(() => {
+    console.log('table created');
+});
+module.exports = model;
+

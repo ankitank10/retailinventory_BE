@@ -1,7 +1,8 @@
 const Customer = require('../model/customer');
 
 const setData = async () => {
-    for (let i = 0; i < 10001; i++) {
+    console.log('creating');
+    for (let i = 0; i < 101; i++) {
         await Customer.create(
             {
                 account_name: `Test-${i + 1}`,
