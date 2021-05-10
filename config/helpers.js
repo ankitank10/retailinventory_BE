@@ -2,6 +2,8 @@ const Mysqli = require('mysqli');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
+
+//Add you configurations here
 let conn = new Mysqli({
     Host: 'localhost', // IP/domain name 
     post: 3306, // port, default 3306 
