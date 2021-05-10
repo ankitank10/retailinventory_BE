@@ -8,7 +8,7 @@ let conn = new Mysqli({
     Host: 'localhost', // IP/domain name 
     post: 3306, // port, default 3306 
     user: 'root', // username
-    passwd: 'ank6117599', // password
+    passwd: 'ank', // password
     db: 'retail_inventory_system'
 });
 
